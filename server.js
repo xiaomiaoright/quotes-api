@@ -2,6 +2,8 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var port = 3000;
 var app = express();
+var sqlite3 = require('sqlite3');
+var db = new sqlite3.Database('quotes.db');
 
 var quotes = [
     {
